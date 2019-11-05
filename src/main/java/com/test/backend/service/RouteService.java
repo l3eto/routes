@@ -59,9 +59,9 @@ public class RouteService {
 		try {
 			List<RequestRouteDTO> routes = request.getRoutes();
 
-			if (routes.size() > 1) {
+			if (routes.size() > 0) {
 				List<ResponseRouteDTO> distances = new ArrayList<ResponseRouteDTO>();
-				for (int i = 1; i < routes.size(); i++) {
+				for (int i = 0; i < routes.size(); i++) {
 					distances.add(findDistance(routes.get(i)));
 				}
 				response.setMessage("ROUTES FOUND");
